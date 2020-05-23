@@ -1,0 +1,20 @@
+<div style="display:flex;flex-direction: row;">
+    <div style="display:flex;flex-direction:column;width: 260px;">
+        <client-list ref="client_list" @selected_target="selectedtargethander"></client-list>
+        <video style="width: 240px;height: 180px;" ref="localPreview" autoplay controls></video>
+    </div>
+        <div class="card" style="margin-left: 10px;flex:1">
+        <div class="card-header">
+            <span v-if="targetSocketId">{{targetSocketId}}</span>
+            <span v-else>No target socketId</span>
+        </div>
+        <div class="card-body">
+<!--            <textarea style="width: 100%;height: 300px;resize: none" ref="output" v-model="outputMsg" class="form-control" readonly></textarea>-->
+<!--            <form style="margin-top:10px;display: flex;flex-direction: row" @submit="submitHandler">-->
+<!--                <input style="flex:1" type="text" name="msg" required class="form-control"/>-->
+<!--                <input style="margin-left: 10px" class="btn btn-primary" type="submit" value="send"/>-->
+<!--            </form>-->
+            <video style="width: 480px;height: 320px;" ref="remotePreview" muted controls autoplay></video>
+        </div>
+    </div>
+</div>
